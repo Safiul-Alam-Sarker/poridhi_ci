@@ -1,9 +1,12 @@
 name: Basic Checkout Lab
 
+# Trigger on push to main branch
 on:
   push:
     branches:
-      -main
+      - main
+
+# Define jobs and their steps
 jobs:
   basic-checkout:
     runs-on: ubuntu-latest
@@ -15,6 +18,7 @@ jobs:
       # Step 2: List repository contents
       - name: List files
         run: ls -la
+      
       # Step 3: Display system information
       - name: Show system info
         run: |
